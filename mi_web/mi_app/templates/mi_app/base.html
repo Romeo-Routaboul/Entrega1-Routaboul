@@ -52,7 +52,7 @@
 
                         <h2 class="h4 fw-bolder">Registrar vendedor</h2>
                         <p>En este apartado podras incorporar los datos personales del vendedor en la base de datos.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a class="text-decoration-none" href="{% url 'registro_vendedor' %}">
                             registrar vendedor
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -61,7 +61,7 @@
 
                         <h2 class="h4 fw-bolder">Registrar automoviles</h2>
                         <p>Aqui podras describir los detalles de los automoviles que se encuentran a la venta a nuestra base de datos.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a class="text-decoration-none" href="{% url 'registro_automoviles' %}">
                             Registrar automovil
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -70,7 +70,7 @@
  
                         <h2 class="h4 fw-bolder">Registrar cliente</h2>
                         <p>En este apartado podras incorporar los datos personales y de contacto de los clientes en la base de datos.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a class="text-decoration-none" href="{% url 'registro_clientes' %}">
                             Registrar clientes
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -94,10 +94,9 @@
                                     <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
+                            {% block contenido %}
+                            
+                            {% endblock %}
                            
         <!-- Footer-->
         <footer class="py-5 bg-dark">

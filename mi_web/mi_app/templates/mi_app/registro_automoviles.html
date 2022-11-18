@@ -1,0 +1,23 @@
+{% extends 'mi_app/base.html' %}
+
+{% block contenido %}
+
+
+<form action="{% url 'registro_automoviles'  %} " method="post">
+    {% csrf_token %}
+    <p>
+        Marca <input type="text" name="marca">
+    </p>
+
+    <p>
+        Modelo <input type="number" name="modelo">
+    </p>
+
+    <p>
+        Precio <input type="number" name="precio">
+    </p>
+
+    <input type="submit" value="Registrar">
+</form>
+
+{%  endblock %}
