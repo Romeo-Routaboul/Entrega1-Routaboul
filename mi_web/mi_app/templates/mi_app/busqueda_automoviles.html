@@ -1,0 +1,14 @@
+{% extends 'mi_app/base.html' %}
+
+{% block contenido %}
+
+
+<form action="{% url 'resultado_busqueda_automoviles' %}" method="get">
+    <p>
+        Marca <input type="text" name="marca_autos">
+        <input type="submit" value="buscar automovil">
+    </p>
+</form>
+
+
+{% endblock %}

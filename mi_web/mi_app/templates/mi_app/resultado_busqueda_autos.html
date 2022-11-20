@@ -1,0 +1,14 @@
+{% extends 'mi_app/base.html' %}
+
+{% block contenido %}
+
+<ul>
+    {%for m in autos %}
+        <li>{{m.marca}} - {{m.modelo}} - ${{m.precio}} </li>
+
+{% endfor %}
+
+</ul>
+
+
+{%  endblock %}

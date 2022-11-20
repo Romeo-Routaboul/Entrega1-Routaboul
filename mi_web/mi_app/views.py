@@ -2,6 +2,7 @@ from django.shortcuts import render
 from mi_app.models import*
 
 
+
 # Create your views here.
 
 def inicio(request):
@@ -22,11 +23,9 @@ def registro_automoviles(request):
         marca_auto = request.POST["marca"]
         modelo_auto = request.POST["modelo"]
         precio_auto = request.POST["precio"]
-        
       
-        auto = Auto(marca=marca_auto, modelo=modelo_auto, precio=precio_auto )
-        auto.save()
-
+        autos = Auto(marca=marca_auto, modelo= modelo_auto, precio= precio_auto)
+        autos.save()
     return render(request, "mi_app/registro_automoviles.html")
 
 def registro_clientes(request):
@@ -38,3 +37,13 @@ def registro_clientes(request):
         cliente.save()
 
     return render(request, "mi_app/registro_clientes.html")
+
+def busqueda_automoviles(request):
+
+    return render(request, "mi_app/busqueda_automoviles.html")
+
+def resultado_busqueda_automoviles(request):
+    marca_autos = request.GET["marca_autos"]
+
+    autos = Auto.objects.filter(marca__icontains = marca_autos)
+    return render (request, "mi_app/resultado_busqueda_autos.html", {"autos":autos})
