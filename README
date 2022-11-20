@@ -1,1 +1,17 @@
-hola, bienvenido a mi web, para probarla deberas dirigirte a "coder/inicio" para ver la plantilla principal
+hola, bienvenido a mi web, para probarla deberás dirigirte a url "coder/inicio" para ver la plantilla principal
+
+la idea era hacer una web que podría usarse para manejar la base de datos de una concesionaria de automóviles, en esta web podrás:
+
+- Registrar los datos de los vendedores (nombre y teléfono), de la concesionaria para cargarlos en la base de datos
+- Registrar los datos de los automóviles (marca, modelo, precio) disponibles para su venta 
+- Registrar los datos de los clientes (nombre y teléfono) para cargarlos en la base de datos
+- Buscar entre los automóviles disponibles para su venta (ingresando la marca del automovil, por ej. Chevrolet, Ford, Honda, etc)
+
+Para acceder a estos apartados previamente mencionados puedes usar los botones que se ven en el inicio, estos te dirigirán a la url correspondiente.
+
+Se implementaron todos los requisitos para aprobar el desafío:
+- Herencia de html
+- 3 Clases en models (Vendedor, Cliente, Auto)
+- Formulario para ingresar datos a todas las clases (Vendedor, Auto, Cliente)
+- Formulario para buscar algo en la BD
+- Archivo README
